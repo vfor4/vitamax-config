@@ -1,0 +1,24 @@
+spring.config.activate.on-profile: test
+spring:
+  cloud.gateway.server.webflux:
+    routes:
+      - id: path_route
+        uri: lb://course-composite-service
+        predicates:
+          - Path=/api/v1/**
+      - id: eureka-web-start
+        uri: http://${app.eureka-service}:8761
+        predicates:
+          - Path=/eureka/web
+        filters:
+          - SetPath=/
+      - id: eureka-web-other
+        uri: http://${app.eureka-service}:8761
+        predicates:
+          - Path=/eureka/**
+app.eureka-service: discovery
+app.course-composite-service: course-composite-service
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery:8761/eureka/

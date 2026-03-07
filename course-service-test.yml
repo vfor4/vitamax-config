@@ -1,0 +1,17 @@
+spring.config.activate.on-profile: test
+server.port: 8080
+logging:
+  level:
+    org:
+      springframework:
+        amqp: debug
+        cloud: debug
+spring:
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
+  rabbitmq:
+    host: rabbitmq
+
+eureka.client.service-url.defaultZone: http://discovery:8761/eureka/
