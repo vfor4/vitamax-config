@@ -1,4 +1,4 @@
-spring.config.activate.on-profile: test
+spring.config.activate.on-profile: dev
 server.port: 8080
 logging:
   level:
@@ -7,8 +7,11 @@ logging:
         amqp: debug
         cloud: debug
 spring:
-  datasource:
-    url: jdbc:postgresql://postgresql:5432/postgres
+  data:
+    mongodb:
+      host: mongodb
+      port: 27017
   rabbitmq:
     host: rabbitmq
+
 eureka.client.service-url.defaultZone: http://discovery:8761/eureka/
