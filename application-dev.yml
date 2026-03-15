@@ -1,1 +1,1 @@
-eureka.client.service-url.defaultZone: http://username@passworddiscovery:8761/eureka/
+eureka.client.service-url.defaultZone: http://username:password@discovery:8761/eureka/
