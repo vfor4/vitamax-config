@@ -6,11 +6,6 @@ spring:
         uri: lb://course-composite-service
         predicates:
           - Path=/api/v1/**
-        filters:
-          - name: CircuitBreaker
-            args:
-              name: course-composite-circuit-breaker
-              fallbackUri: forward:/fallback
       - id: eureka-web-start
         uri: http://${app.eureka-service}:8761
         predicates:
