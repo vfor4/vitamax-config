@@ -18,7 +18,3 @@ spring:
           - Path=/eureka/**
 app.eureka-service: discovery
 app.course-composite-service: course-composite-service
-eureka:
-  client:
-    service-url:
-      defaultZone: http://discovery:8761/eureka/

@@ -13,4 +13,3 @@ spring:
     password: postgres
   rabbitmq:
     host: rabbitmq
-eureka.client.service-url.defaultZone: http://discovery:8761/eureka/
