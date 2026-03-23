@@ -1,7 +1,6 @@
-spring.config.activate.on-profile: dev
 spring:
-  cloud.gateway.server.webflux:
-    routes:
+  cloud:
+    gateway.server.webflux.routes:
       - id: path_route
         uri: lb://course-composite-service
         predicates:
